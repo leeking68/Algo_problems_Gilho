@@ -18,11 +18,12 @@ public class Boj1699dp2 {
 		
 		for(int i = 1; i <n+1; i++) {
 			arr[i] = i;
-		}
-		
-		for(int i = 1; i <n+1; i++) {
 			for(int j = 1; j*j<i; j++) {
-				arr[i] = Math.min(arr[i], arr[i-j*j]+1);
+				
+				if(arr[i] > arr[i-j*j]+1) {
+					arr[i] = arr[i-j*j]+1;
+				}
+				
 			}
 		}
 		
