@@ -15,6 +15,7 @@ public class Boj1012dfs2 {
 
 	public static int T, N, M,K, map[][];
 	public static boolean[][] visited;
+	public static int max = -1;
 	public static int dx[] = { -1, 1, 0, 0 }, dy[] = { 0, 0, -1, 1 };
 
 	public static void main(String[] args) {
@@ -42,6 +43,7 @@ public class Boj1012dfs2 {
 					if (map[i][j] == 1&&!visited[i][j]) {
 						visited[i][j] = true;
 						dfs(i, j);
+						
 						cnt++;
 					}
 				}
